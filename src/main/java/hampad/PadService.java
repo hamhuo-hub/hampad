@@ -228,6 +228,48 @@ public class PadService extends JFrame{
 
     private void openAction(){
         System.out.println("open");
+            JFileChooser chooser = new JFileChooser();
+            int i = chooser.showOpenDialog(frame);
+            if (i == JFileChooser.APPROVE_OPTION) {
+                file = chooser.getSelectedFile();
+                System.out.println("file opened: " + file.getName());
+
+                try {
+                    // 读取文件内容并显示在 textArea
+                    BufferedReader in = new BufferedReader(new FileReader(file));
+                    StringBuilder content = new StringBuilder();
+                    String line;
+                    while ((line = in.readLine()) != null) {
+                        content.append(line).append("\n");
+                    }
+                    syntaxTextArea.setText(content.toString());
+                    in.close();
+
+                    // 根据文件后缀名设置代码高亮
+                    String fileName = file.getName().toLowerCase();
+                    if (fileName.endsWith(".java")) {
+                        syntaxTextArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JAVA);
+                    } else if (fileName.endsWith(".xml")) {
+                        syntaxTextArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_XML);
+                    } else if (fileName.endsWith(".html") || fileName.endsWith(".htm")) {
+                        syntaxTextArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_HTML);
+                    } else if (fileName.endsWith(".js")) {
+                        syntaxTextArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JAVASCRIPT);
+                    } else if (fileName.endsWith(".css")) {
+                        syntaxTextArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_CSS);
+                    } else if (fileName.endsWith(".py")) {
+                        syntaxTextArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_PYTHON);
+                    } else {
+                        syntaxTextArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_NONE); // 如果没有匹配到，就不使用高亮
+                    }
+                    frame.setTitle(file.getName());
+                    changed = false;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                System.out.println("open canceled");
+            }
     }
 
     private void saveAction() {
