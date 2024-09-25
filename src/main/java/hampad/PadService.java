@@ -83,7 +83,7 @@ public class PadService extends JFrame{
             if (i == JOptionPane.YES_OPTION) {
                 frame.dispose();
             }
-            System.out.println("cancled");
+            System.out.println("cancl ed");
         });
         menuBar.add(exitMenu);
 
