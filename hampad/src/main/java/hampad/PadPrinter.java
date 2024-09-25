@@ -24,7 +24,7 @@ public class PadPrinter implements Printable {
         Graphics2D g2d = (Graphics2D)g;
         g2d.translate(pf.getImageableX(), pf.getImageableY());
 
-        g.drawString("hellp" ,50,50);
+        g.drawString("sample" ,50,50);
         // tell the caller that this page is part
         // of the printed document
         return PAGE_EXISTS;
