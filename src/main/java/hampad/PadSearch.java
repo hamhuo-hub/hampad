@@ -2,7 +2,9 @@
 package hampad;
 
 // Import necessary classes
+
 import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
