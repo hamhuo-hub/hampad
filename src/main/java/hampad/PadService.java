@@ -17,6 +17,8 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.filechooser.FileSystemView;
 import javax.swing.text.BadLocationException;
 import java.awt.*;
 
@@ -61,11 +63,23 @@ public class PadService extends JFrame{
         menuBar.add(openMenu);
             //newfile
         newMenu = new JMenuItem("New File");
-        newMenu.addActionListener(actionEvent -> newAction());
+        newMenu.addActionListener(actionEvent -> {
+            try {
+                newAction();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
         menuBar.add(newMenu);
             //save file
         saveMenu = new JMenuItem("Save");
-        saveMenu.addActionListener(actionEvent -> saveAction());
+        saveMenu.addActionListener(actionEvent -> {
+            try {
+                saveAction();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
         menuBar.add(saveMenu);
             //search file
         searchMenu = new JMenuItem("Search");
@@ -77,7 +91,13 @@ public class PadService extends JFrame{
         exitMenu.addActionListener(actionEvent -> {
             if (changed) {
                 int O = JOptionPane.showConfirmDialog(syntaxTextArea,"Some Text Still on the page, Want Save them?");
-                if(O == JOptionPane.YES_OPTION){ saveAction();}
+                if(O == JOptionPane.YES_OPTION){
+                    try {
+                        saveAction();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
             }
             int i = JOptionPane.showConfirmDialog(syntaxTextArea,"are you sure you want to exit?");
             if (i == JOptionPane.YES_OPTION) {
@@ -213,7 +233,7 @@ public class PadService extends JFrame{
             doc.close();
         }
     }
-    private void newAction(){
+    private void newAction() throws IOException {
         System.out.println("new");
         frame.setTitle("New Pad");
         if(changed){
@@ -270,27 +290,27 @@ public class PadService extends JFrame{
             }
     }
 
-    private void saveAction() {
+    private void saveAction() throws IOException {
         System.out.println("save");
         JFileChooser chooser = new JFileChooser();
+        chooser.setFileFilter(new FileNameExtensionFilter("TXT File", "txt"));
+        chooser.setFileFilter(new FileNameExtensionFilter("PDF File", "pdf"));
         int i = chooser.showSaveDialog(frame);
+        String filename = chooser.getFileFilter().getDescription();
+        System.out.println(filename);
         if (i == JFileChooser.APPROVE_OPTION) {
-            try {
-                file = chooser.getSelectedFile();
-                System.out.println("file create");
-                //A funny fact is you do not have to associated file into Textarea.
-                //save file and write to TextArea is separated
-                PrintWriter out = new PrintWriter(new FileWriter(file));
-                if (file.canWrite()) {
-                    out.write(syntaxTextArea.getText());
-                    System.out.println(syntaxTextArea.getText());
-                    //remember to close upstream
-                    out.close();
+            if(filename == "PDF File"){
+                exportAction();
+            }
+            else {
+                try {
+                    saveFileCore(chooser);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
                 }
-            } catch (IOException e) {
-                throw new RuntimeException(e);
             }
         }
+
         if (i == JFileChooser.CANCEL_OPTION) {
             System.out.println("cancel ed");
         }
@@ -300,6 +320,20 @@ public class PadService extends JFrame{
             System.out.println("search");
             String text = syntaxTextArea.getText();
            PadSearch search = new PadSearch(this,syntaxTextArea);
+        }
+
+        public void saveFileCore(JFileChooser chooser) throws IOException {
+            file = chooser.getSelectedFile();
+            System.out.println("file create");
+            //A funny fact is you do not have to associated file into Textarea.
+            //save file and write to TextArea is separated
+            PrintWriter out = new PrintWriter(new FileWriter(file));
+            if (file.canWrite()) {
+                out.write(syntaxTextArea.getText());
+                System.out.println(syntaxTextArea.getText());
+                //remember to close upstream
+                out.close();
+            }
         }
     }
 
