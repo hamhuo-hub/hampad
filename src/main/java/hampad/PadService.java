@@ -20,6 +20,7 @@ import javax.swing.event.CaretListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.filechooser.FileSystemView;
 import javax.swing.text.BadLocationException;
+import javax.xml.stream.Location;
 import java.awt.*;
 
 import java.awt.event.ActionListener;
@@ -34,13 +35,13 @@ import java.time.format.DateTimeFormatter;
 public class PadService extends JFrame{
     private JFrame frame;
     private JMenuBar menuBar;
+    private JMenu menuFile;
     private JMenuItem newMenu;
     private JMenuItem saveMenu;
     private JMenuItem exitMenu;
     private JMenuItem helpMenu;
     private JMenuItem searchMenu;
     private JMenuItem openMenu;
-    private JMenu exportMenu;
     private JMenuItem printMenuItem;
     private JMenuItem exportMenuItem;
     private JMenu aboutMenu;
@@ -57,10 +58,11 @@ public class PadService extends JFrame{
         //menu bar
         menuBar = new JMenuBar();
         frame.setJMenuBar(menuBar);
+        menuFile = new JMenu("File");
             //openfile
         openMenu = new JMenuItem("Open");
         openMenu.addActionListener(actionEvent -> openAction());
-        menuBar.add(openMenu);
+        menuFile.add(openMenu);
             //newfile
         newMenu = new JMenuItem("New File");
         newMenu.addActionListener(actionEvent -> {
@@ -70,7 +72,7 @@ public class PadService extends JFrame{
                 throw new RuntimeException(e);
             }
         });
-        menuBar.add(newMenu);
+        menuFile.add(newMenu);
             //save file
         saveMenu = new JMenuItem("Save");
         saveMenu.addActionListener(actionEvent -> {
@@ -80,11 +82,11 @@ public class PadService extends JFrame{
                 throw new RuntimeException(e);
             }
         });
-        menuBar.add(saveMenu);
+        menuFile.add(saveMenu);
             //search file
         searchMenu = new JMenuItem("Search");
         searchMenu.addActionListener(actionEvent -> searchAction());
-        menuBar.add(searchMenu);
+        menuFile.add(searchMenu);
             //exit file
         exitMenu = new JMenuItem("Exit");
         System.out.println("hit exit");
@@ -105,12 +107,11 @@ public class PadService extends JFrame{
             }
             System.out.println("cancl ed");
         });
-        menuBar.add(exitMenu);
+        menuFile.add(exitMenu);
 
         //export menu
-        exportMenu = new JMenu("Export & Print");
         printMenuItem = new JMenuItem("Print");
-        exportMenuItem = new JMenuItem("Export");
+        exportMenuItem = new JMenuItem("Export to PDF");
         printMenuItem.addActionListener(actionEvent -> {
             PadPrinter printer = new PadPrinter();
             printer.doPrint();
@@ -122,10 +123,9 @@ public class PadService extends JFrame{
                 throw new RuntimeException(e);
             }
         });
-        exportMenu.add(exportMenuItem);
-        exportMenu.add(printMenuItem);
-        menuBar.add(exportMenu);
-
+        menuFile.add(exportMenuItem);
+        menuFile.add(printMenuItem);
+        menuBar.add(menuFile);
             //about
         aboutMenu = new JMenu("About");
         helpMenu = new JMenuItem("Help");
@@ -153,6 +153,7 @@ public class PadService extends JFrame{
         JMenuItem aboutMenuItem = new JMenuItem("Hamhuo & JiaPeng" + "Designed and Provide");
         aboutMenu.add(aboutMenuItem);
         menuBar.add(aboutMenu);
+
 
         initTextarea();
 
@@ -294,15 +295,9 @@ public class PadService extends JFrame{
         System.out.println("save");
         JFileChooser chooser = new JFileChooser();
         chooser.setFileFilter(new FileNameExtensionFilter("TXT File", "txt"));
-        chooser.setFileFilter(new FileNameExtensionFilter("PDF File", "pdf"));
         int i = chooser.showSaveDialog(frame);
-        String filename = chooser.getFileFilter().getDescription();
-        System.out.println(filename);
         if (i == JFileChooser.APPROVE_OPTION) {
-            if(filename == "PDF File"){
-                exportAction();
-            }
-            else {
+            {
                 try {
                     saveFileCore(chooser);
                 } catch (IOException e) {
