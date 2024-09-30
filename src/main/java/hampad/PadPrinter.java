@@ -8,6 +8,11 @@ import java.awt.*;
 // PadPrinter class implements Printable interface, defining how the contents should be printed
 public class PadPrinter implements Printable {
 
+    //factory method to create a new PadPrinter
+    public static PadPrinter newPadPrinter(){
+        return new PadPrinter();
+    }
+
     // Method that gets called to render a page for printing
     public int print(Graphics g, PageFormat pf, int page)
             throws PrinterException {
@@ -30,6 +35,8 @@ public class PadPrinter implements Printable {
         // Return PAGE_EXISTS to indicate that the page was rendered successfully and is part of the document
         return PAGE_EXISTS;
     }
+
+
 
     // Method to initiate the printing process
     public void doPrint() {
