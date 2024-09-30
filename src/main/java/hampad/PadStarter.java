@@ -1,12 +1,7 @@
 package hampad;
 
-
-
-
 import javax.swing.*;
 import java.io.IOException;
-
-
 
 public class PadStarter {
 
@@ -15,8 +10,5 @@ public class PadStarter {
        new PadService();
 
     }
-
-
-
 
 }
