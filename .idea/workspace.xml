@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a13376a0-4a12-4f45-a34c-20e5c90675b2" name="Changes" comment="Add files via upload" />
+    <list default="true" id="a13376a0-4a12-4f45-a34c-20e5c90675b2" name="Changes" comment="Add files via upload">
+      <change afterPath="$PROJECT_DIR$/251-Assignment1-2024-Jiapeng-Zihang.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hampad/PadFileIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hampad/PadFileIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hampad/PadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hampad/PadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hampad/PadStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hampad/PadStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadFileIO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hampad/PadService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +27,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hamhuo-hub&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JiaPengShang/251-Assignment1-2024-Jiapeng-Zihang.git&quot;,
+    &quot;accountId&quot;: &quot;7057aeee-e89e-4bbf-90c8-1b9ce5f27ce1&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -48,12 +74,14 @@
     "Application.HelloWorldPrinter.executor": "Debug",
     "Application.JHighlight (1).executor": "Run",
     "Application.JHighlight.executor": "Run",
-    "Application.PadStarter.executor": "Run",
+    "Application.PadStarter.executor": "Debug",
+    "JUnit.PadStarter.count.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "hampad",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/kinemika/Desktop/251-Assignment1-2024-Jiapeng-Zihang",
+    "last_opened_file_path": "C:/Users/kinemika/Desktop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -113,9 +141,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PadStarter.count" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hampad" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hampad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hampad" />
+      <option name="MAIN_CLASS_NAME" value="hampad.PadStarter" />
+      <option name="METHOD_NAME" value="count" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.JHighlight" />
+      <item itemvalue="Application.JHighlight (1)" />
+      <item itemvalue="Application.PadStarter" />
+      <item itemvalue="JUnit.PadStarter.count" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.PadStarter" />
+        <item itemvalue="JUnit.PadStarter.count" />
         <item itemvalue="Application.JHighlight (1)" />
         <item itemvalue="Application.JHighlight" />
       </list>
@@ -147,6 +198,7 @@
       <workItem from="1727255610092" duration="6357000" />
       <workItem from="1727271311409" duration="1905000" />
       <workItem from="1727275135061" duration="43000" />
+      <workItem from="1727671752262" duration="1587000" />
     </task>
     <task id="LOCAL-00001" summary="Add files via upload">
       <option name="closed" value="true" />
@@ -165,6 +217,18 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add files via upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add files via upload" />
+    <MESSAGE value="整洁代码，优化逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="整洁代码，优化逻辑" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hampad/PadService.java</url>
+          <line>177</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

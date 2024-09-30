@@ -1,12 +1,7 @@
 package hampad;
 
 
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDPage;
-import org.apache.pdfbox.pdmodel.PDPageContentStream;
-import org.apache.pdfbox.pdmodel.font.PDFont;
-import org.apache.pdfbox.pdmodel.font.PDType1Font;
-import org.apache.pdfbox.pdmodel.font.Standard14Fonts;
+
 import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
 import org.fife.ui.rsyntaxtextarea.SyntaxConstants;
 import org.fife.ui.rtextarea.RTextScrollPane;
@@ -15,8 +10,7 @@ import org.fife.ui.rtextarea.RTextScrollPane;
 import javax.swing.*;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.text.BadLocationException;
+
 import java.awt.*;
 
 import java.io.*;
@@ -72,11 +66,11 @@ public class PadService extends JFrame {
 
         //File menu
         menuFile = new JMenu("File");
-        openMenuItem = new JMenuItem("Open");
+        openMenuItem = new JMenuItem("Open File");
         newMenuItem = new JMenuItem("New File");
-        saveMenuItem = new JMenuItem("Save");
+        saveMenuItem = new JMenuItem("Save File");
         searchMenu = new JMenuItem("Search");
-        exitMenuItem = new JMenuItem("Exit");
+        exitMenuItem = new JMenuItem("Exit without Saving");
         printMenuItem = new JMenuItem("Print");
 
 
@@ -165,51 +159,6 @@ public class PadService extends JFrame {
         updateFrameTitle();
     }
 
-    private void exportAction() {
-        try (PDDocument doc = new PDDocument()) {
-
-            // Create a new PDF page
-            PDPage page = new PDPage();
-            doc.addPage(page);
-
-            // get text from text area
-            String text = syntaxTextArea.getText();
-
-            // create input stream for pdf file
-            final byte[] byteStream = text.getBytes();
-
-
-            // use PDPageContentStream to write file
-            try (PDPageContentStream contentStream = new PDPageContentStream(doc, page)) {
-                contentStream.beginText();
-
-                // Set text start
-                contentStream.newLineAtOffset(50, 750); // Adjust location according to requirements
-
-                // Set font and font size
-                PDFont font = new PDType1Font(Standard14Fonts.FontName.TIMES_ROMAN);
-                contentStream.setFont(font, 12);
-
-                // Split the text into lines and write line by line
-                String[] lines = text.split("\n");
-                for (String line : lines) {
-                    contentStream.showText(line); // Write the current line
-                    contentStream.newLineAtOffset(0, -15); // Newline, move the Y-axis down
-                }
-
-                contentStream.endText();
-            }
-
-            // Save and close the PDF
-            JFileChooser chooser = new JFileChooser();
-            if (chooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION) {
-                doc.save(chooser.getSelectedFile()); // Save document as output.pdf
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     private void newAction() {
         System.out.println("new");
         frame.setTitle("New Pad");
@@ -223,7 +172,7 @@ public class PadService extends JFrame {
         initTextarea();
     }
 
-    //to-do separate to sigle class
+
     private void openAction() {
 
         JFileChooser chooser = new JFileChooser();
@@ -235,15 +184,9 @@ public class PadService extends JFrame {
             file = chooser.getSelectedFile();
 
             try {
-                // Read the file contents and display them in textArea
-                BufferedReader in = new BufferedReader(new FileReader(file));
-                StringBuilder content = new StringBuilder();
-                String line;
-                while ((line = in.readLine()) != null) {
-                    content.append(line).append("\n");
-                }
-                syntaxTextArea.setText(content.toString());
-                in.close();
+                String content = PadFileIO.openFile(file);
+                syntaxTextArea.setText(content);
+
 
                 // Set code highlight based on file extension
                 String fileName = file.getName().toLowerCase();
@@ -264,7 +207,7 @@ public class PadService extends JFrame {
                 }
                 frame.setTitle(file.getName());
                 changed = false;
-            } catch (IOException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         } else {
@@ -276,12 +219,13 @@ public class PadService extends JFrame {
 
         JFileChooser chooser = PadFileIO.getInstance().getFileChooser();
         int i = chooser.showSaveDialog(frame);
-        String filePath = chooser.getSelectedFile().getAbsolutePath();
-        String description = chooser.getFileFilter().getDescription();
-        String content = syntaxTextArea.getText();
+
 
         if (i == JFileChooser.APPROVE_OPTION){
             try {
+                String filePath = chooser.getSelectedFile().getAbsolutePath();
+                String description = chooser.getFileFilter().getDescription();
+                String content = syntaxTextArea.getText();
                 PadFileIO.saveFile(content,filePath,description);
             }catch (IOException e){
                 e.printStackTrace();
@@ -298,7 +242,7 @@ public class PadService extends JFrame {
 
 
     private void exitAction() {
-
+       frame.dispose();
 
     }
 
