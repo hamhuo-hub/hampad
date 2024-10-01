@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a13376a0-4a12-4f45-a34c-20e5c90675b2" name="Changes" comment="Add files via upload">
-      <change afterPath="$PROJECT_DIR$/251-Assignment1-2024-Jiapeng-Zihang.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hampad/PadFileIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hampad/PadFileIO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hampad/PadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hampad/PadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hampad/PadStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hampad/PadStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadFileIO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hampad/PadService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/hampad-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,14 +72,14 @@
     "Application.HelloWorldPrinter.executor": "Debug",
     "Application.JHighlight (1).executor": "Run",
     "Application.JHighlight.executor": "Run",
-    "Application.PadStarter.executor": "Debug",
+    "Application.PadStarter.executor": "Run",
     "JUnit.PadStarter.count.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "hampad",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/kinemika/Desktop",
+    "last_opened_file_path": "C:/Users/kinemika/Desktop/251-Assignment1-2024-Jiapeng-Zihang",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -199,6 +197,7 @@
       <workItem from="1727271311409" duration="1905000" />
       <workItem from="1727275135061" duration="43000" />
       <workItem from="1727671752262" duration="1587000" />
+      <workItem from="1727681554757" duration="5724000" />
     </task>
     <task id="LOCAL-00001" summary="Add files via upload">
       <option name="closed" value="true" />
@@ -218,7 +217,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add files via upload" />
     <MESSAGE value="整洁代码，优化逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="整洁代码，优化逻辑" />
+    <MESSAGE value="debug openODTfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug openODTfile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

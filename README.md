@@ -6,15 +6,18 @@
 
 (香肠笔记)
 
-## 目标用户：
+> 追求即开即用
+>
+> 轻量化的软件
+>
+> 简洁的ui，不需要复杂的元素
+>
+> 进行简单排版，快速思维风暴
+>
 
-追求即开即用
+All needed file has pack to `hampad-{version}.jar`
 
-轻量化的软件
-
-简洁的ui，不需要复杂的元素
-
-进行简单排版，快速思维风暴
+### For windows users
 
 
 
@@ -31,5 +34,4 @@ Data Marker
 ## 技术栈：
 
 ​	java，jwt
-
 
