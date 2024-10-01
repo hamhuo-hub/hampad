@@ -14,24 +14,51 @@
 >
 > 进行简单排版，快速思维风暴
 >
+> 
+>
+> Pursuing ready-to-use
+>
+> lightweight software
+>
+> Simple UI, no need for complicated elements
+>
+> Carry out simple layout and quick thinking storm
+
+
 
 All needed file has pack to `hampad-{version}.jar`
 
+Have to say, it was a bit difficult publish somthing on platform like npm or github with certain network-situation like china mainland. Glad we made it.
+
+`npm`:  https://www.npmjs.com/package/hampad
+
+`github`:  https://github.com/hamhuo-hub/hampad.git
+
 ### For windows users
 
+open jar File, all needed dependecies have included.
+
+### For Linux Users
 
 
-## 功能：
 
-文字编辑
+```
+# IMPORTANT
+# RUN FOLLOW COMMAND TO ALLOW X11 CONNECTION： 
+# xhost + 
+# THEN OPEN CONTAINER： 
+# docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -d hampad
+```
 
-​	code Highlighting, line counting, AUTO-GENERATED header 
 
-文件保存，加载, File Exit
 
-Data Marker
+## 功能 Usage：
 
-## 技术栈：
+![image-20241002000009175](https://s2.loli.net/2024/10/02/rjhgnmzXMAke5bK.png)
 
-​	java，jwt
+## Get Start
+
+hit `File` menu and open or create a new page
+
+**That's it !**
 
