@@ -54,6 +54,14 @@ open jar File, all needed dependecies have included.
 
 ## 功能 Usage：
 
+
+
+
+
+
+
+
+
 ![image-20241002000009175](https://s2.loli.net/2024/10/02/rjhgnmzXMAke5bK.png)
 
 ## Get Start
