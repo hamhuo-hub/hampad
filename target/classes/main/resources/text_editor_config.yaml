@@ -1,0 +1,4 @@
+text_editor:
+  default_text_format: plain
+  default_font_color: black
+  default_font_size: 12
