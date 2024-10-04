@@ -24,13 +24,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Iterator;
 
-
 public class PadFileIO {
 
-    private static final Logger logger = LogManager.getLogger(PadFileIO.class);
-    private JFileChooser chooser;
+    private static final Logger logger = LogManager.getLogger(PadFileIO.class); // Logger for debugging and logging info.
+    private JFileChooser chooser; // File chooser for user to select files.
 
     public JFileChooser getFileChooser() {
+        // Initialize file chooser and set file filters
         chooser = new JFileChooser();
         chooser.setFileFilter(new FileNameExtensionFilter("TXT File", "txt"));
         chooser.setFileFilter(new FileNameExtensionFilter("ODT File", "odt"));
@@ -39,13 +39,14 @@ public class PadFileIO {
     }
 
     public static PadFileIO getInstance() {
+        // Singleton pattern to get instance of this class
         return new PadFileIO();
     }
 
     public static void saveFile(String content, String path, String description) throws IOException {
         File selectedFile;
 
-        // Check if the file has an extension
+        // Append correct file extension if not present
         if (!path.contains(".")) {
             switch (description) {
                 case "TXT File":
@@ -64,6 +65,7 @@ public class PadFileIO {
 
         selectedFile = new File(path);
 
+        // Save content to file based on file type
         switch (description) {
             case "PDF File":
                 exportPDF(content, selectedFile);
@@ -85,10 +87,11 @@ public class PadFileIO {
                 contentStream.beginText();
                 contentStream.newLineAtOffset(50, 700);
 
-                // Load a Unicode font
+                // Use a bold Times font for the PDF content
                 PDFont font = new PDType1Font(Standard14Fonts.FontName.TIMES_BOLD);
                 contentStream.setFont(font, 12);
 
+                // Write each line from the content to the PDF page
                 String[] lines = content.split("\n");
                 for (String line : lines) {
                     contentStream.showText(line);
@@ -98,6 +101,7 @@ public class PadFileIO {
                 contentStream.endText();
             }
 
+            // Finish and save the PDF document
             doc.save(file);
             logger.info("PDF file saved successfully: {}", file.getAbsolutePath());
         } catch (IOException e) {
@@ -106,6 +110,7 @@ public class PadFileIO {
     }
 
     private static void txtFile(String content, File file) {
+        // Write content to a plain text file
         try (PrintWriter out = new PrintWriter(new FileWriter(file))) {
             out.write(content);
             logger.info("TXT file saved successfully: {}", file.getAbsolutePath());
@@ -115,6 +120,7 @@ public class PadFileIO {
     }
 
     private static void odtFile(String content, File file) {
+        // Write content to an ODT file using the ODF Toolkit
         try {
             TextDocument document = TextDocument.newTextDocument();
             String[] lines = content.split("\n");
@@ -125,6 +131,7 @@ public class PadFileIO {
             document.save(file);
             logger.info("ODT file saved successfully: {}", file.getAbsolutePath());
         } catch (Exception e) {
+            // Handle exceptions for ODF document processing
             logger.error("Error saving ODT file", e);
         }
     }
@@ -140,14 +147,17 @@ public class PadFileIO {
     }
 
     public static String openFile(File file) throws Exception {
+        // Open and return content from a file
         return loadFile(file);
     }
 
     public static String openTXTFile(File file) throws IOException {
+        // Specifically open and return content from a TXT file
         return loadTXTFile(file);
     }
 
     public static String openODTFile(File file) throws IOException {
+        // Specifically open and return content from an ODT file
         try {
             return loadODTFile(file);
         } catch (Exception e) {
@@ -155,33 +165,32 @@ public class PadFileIO {
         }
     }
 
-
     private static String loadODTFile(File file) throws Exception {
+        // Load content from an ODT file using ODF Toolkit
         StringBuilder content = new StringBuilder();
         try (InputStream inputStream = new FileInputStream(file);
              TextDocument document = TextDocument.loadDocument(inputStream)) {
 
-            // 获取文档中的所有段落
+            // Iterate through paragraphs and compile text content
             for (Iterator<Paragraph> it = document.getParagraphIterator(); it.hasNext(); ) {
-                Paragraph paragraph = it.next(); // 获取当前段落
-                content.append(paragraph.getTextContent()).append("\n"); // 添加段落文本
+                Paragraph paragraph = it.next();
+                content.append(paragraph.getTextContent()).append("\n");
             }
         }
         return content.toString();
     }
 
-
-
-
     private static String loadTXTFile(File file) throws IOException {
+        // Load and return content from a plain text file
         return new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())));
     }
 
     private static String getFileExtension(File file) {
+        // Helper method to get the file extension
         String name = file.getName();
         int lastIndexOf = name.lastIndexOf(".");
         if (lastIndexOf == -1) {
-            return ""; // Empty extension
+            return ""; // No extension found
         }
         return name.substring(lastIndexOf + 1);
     }

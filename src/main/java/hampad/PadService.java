@@ -1,70 +1,45 @@
 package hampad;
 
-
-
 import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
 import org.fife.ui.rsyntaxtextarea.SyntaxConstants;
 import org.fife.ui.rtextarea.RTextScrollPane;
-
 
 import javax.swing.*;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
 
 import java.awt.*;
-
 import java.io.*;
-
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class PadService extends JFrame {
-    private JFrame frame;
-    private JMenuBar menuBar;
-    private JMenu menuFile;
-    private JMenu aboutMenu;
-    private JMenuItem newMenuItem;
-    private JMenuItem saveMenuItem;
-    private JMenuItem exitMenuItem;
-    private JMenuItem helpMenuItem;
-    private JMenuItem searchMenu;
-    private JMenuItem openMenuItem;
-    private JMenuItem printMenuItem;
-    private JMenuItem aboutMenuItem;
-    private RSyntaxTextArea syntaxTextArea;
-    private File file;
-    private boolean changed = false;
+    private JFrame frame; // Main frame for the application
+    private JMenuBar menuBar; // Menubar for the frame
+    private JMenu menuFile, aboutMenu; // Menus for file operations and about information
+    private JMenuItem newMenuItem, saveMenuItem, exitMenuItem, helpMenuItem, searchMenu, openMenuItem, printMenuItem, aboutMenuItem;
+    private RSyntaxTextArea syntaxTextArea; // Text area with syntax highlighting capabilities
+    private File file; // File currently being edited
+    private boolean changed = false; // Flag to check if current document is changed
 
-    /**
-     * a basic PadService with empty textArea, menu and print
-     *
-     * @author Hamhuo
-     * @date 9/30/2024 10:36 AM
-     */
     public PadService() throws IOException {
+        frame = new JFrame("New Pad"); // Create new JFrame with title 'New Pad'
+        initComponents(); // Initialize UI components
 
-        //an empty frame
-        frame = new JFrame("New Pad");
-        initComponents();
-
-        //new frame
+        // Setup frame properties
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800, 600);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-
-
+        frame.setSize(800, 600); // Set size
+        frame.setLocationRelativeTo(null); // Center the frame on the screen
+        frame.setVisible(true); // Make frame visible
     }
 
     public void initComponents() throws IOException {
+        menuBar = new JMenuBar(); // Create a new menu bar
+        frame.setJMenuBar(menuBar); // Set the menu bar for the frame
 
-        //menu bar
-        menuBar = new JMenuBar();
-        frame.setJMenuBar(menuBar);
-
-        //File menu
+        // Initialize File menu items
         menuFile = new JMenu("File");
         openMenuItem = new JMenuItem("Open File");
         newMenuItem = new JMenuItem("New File");
@@ -73,7 +48,7 @@ public class PadService extends JFrame {
         exitMenuItem = new JMenuItem("Exit without Saving");
         printMenuItem = new JMenuItem("Print");
 
-
+        // Add items to File menu
         menuFile.add(openMenuItem);
         menuFile.add(newMenuItem);
         menuFile.add(saveMenuItem);
@@ -82,17 +57,17 @@ public class PadService extends JFrame {
         menuFile.add(printMenuItem);
         menuBar.add(menuFile);
 
-        //about menu
+        // Initialize About menu
         aboutMenu = new JMenu("About");
         helpMenuItem = new JMenuItem("Help");
-        aboutMenuItem = new JMenuItem("Hamhuo & JiaPeng" + "Designed and Provide");
+        aboutMenuItem = new JMenuItem("Hamhuo & JiaPeng Designed and Provide");
 
+        // Add items to About menu
         aboutMenu.add(helpMenuItem);
         aboutMenu.add(aboutMenuItem);
         menuBar.add(aboutMenu);
 
-
-        //textArea
+        // Initialize text area with syntax highlighting
         syntaxTextArea = new RSyntaxTextArea();
         syntaxTextArea.setCodeFoldingEnabled(true);
         syntaxTextArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_HTML);
@@ -100,35 +75,19 @@ public class PadService extends JFrame {
         initTextarea();
         frame.add(sp);
 
-        //openfile
+        // Add action listeners for menu items
         openMenuItem.addActionListener(actionEvent -> openAction());
-
-        //newfile Listener
         newMenuItem.addActionListener(actionEvent -> newAction());
-
-        //save file Listener
         saveMenuItem.addActionListener(actionEvent -> saveAction());
-
-        //search file Listener
         searchMenu.addActionListener(actionEvent -> searchAction());
-
-        //exit file Listener
         exitMenuItem.addActionListener(actionEvent -> exitAction());
-
-        //export file to pdf Listener
         printMenuItem.addActionListener(actionEvent -> PadPrinter.newPadPrinter().doPrint());
-
-
-        //helpItem Listener
         helpMenuItem.addActionListener(actionEvent -> helpAction());
 
-
-        syntaxTextArea.addCaretListener(new CaretListener() {
-            @Override
-            public void caretUpdate(CaretEvent e) {
-                changed = true;
-                updateFrameTitle();
-            }
+        // Listener to monitor caret movements in the text area
+        syntaxTextArea.addCaretListener(e -> {
+            changed = true;
+            updateFrameTitle(); // Update the frame title on text change
         });
     }
 
@@ -139,16 +98,13 @@ public class PadService extends JFrame {
         } else if (syntaxTextArea.getText().length() > 0) {
             title = syntaxTextArea.getText().substring(0, Math.min(16, syntaxTextArea.getText().length()));
         }
-        frame.setTitle(title);
+        frame.setTitle(title); // Set the frame title
     }
 
-
     public void initTextarea() {
+        syntaxTextArea.setText(""); // Clear the text area
 
-        //empty textArea
-        syntaxTextArea.setText("");
-
-        //text Area
+        // Display current date and time at the start
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:MM_dd/MM/yyyy");
         String dateTime = LocalDateTime.now().format(formatter);
         syntaxTextArea.setText(dateTime);
@@ -156,39 +112,30 @@ public class PadService extends JFrame {
         syntaxTextArea.setCodeFoldingEnabled(true);
         changed = false;
         file = null;
-        updateFrameTitle();
+        updateFrameTitle(); // Update frame title to reflect new file
     }
 
     private void newAction() {
-        System.out.println("new");
-        frame.setTitle("New Pad");
         if (changed) {
-            int i = JOptionPane.showConfirmDialog(syntaxTextArea, "Some Text Still on the page, Want Save them?");
-            if (i == JOptionPane.YES_OPTION) {
-                saveAction();
+            int response = JOptionPane.showConfirmDialog(frame, "Some Text Still on the page, Want Save them?");
+            if (response == JOptionPane.YES_OPTION) {
+                saveAction(); // Save current document if user chooses to
             }
         }
-        System.out.println("clear");
-        initTextarea();
+        initTextarea(); // Initialize text area for a new document
     }
 
-
     private void openAction() {
-
         JFileChooser chooser = new JFileChooser();
+        int result = chooser.showOpenDialog(frame);
 
-        int i = chooser.showOpenDialog(frame);
-
-        if (i == JFileChooser.APPROVE_OPTION) {
-
-            file = chooser.getSelectedFile();
-
+        if (result == JFileChooser.APPROVE_OPTION) {
+            file = chooser.getSelectedFile(); // Get the selected file
             try {
-                String content = PadFileIO.openFile(file);
-                syntaxTextArea.setText(content);
+                String content = PadFileIO.openFile(file); // Load the content of the file
+                syntaxTextArea.setText(content); // Set content in the text area
 
-
-                // Set code highlight based on file extension
+                // Set syntax highlighting based on file extension
                 String fileName = file.getName().toLowerCase();
                 if (fileName.endsWith(".java")) {
                     syntaxTextArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JAVA);
@@ -203,57 +150,47 @@ public class PadService extends JFrame {
                 } else if (fileName.endsWith(".py")) {
                     syntaxTextArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_PYTHON);
                 } else {
-                    syntaxTextArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_NONE); // 如果没有匹配到，就不使用高亮
+                    syntaxTextArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_NONE); // No syntax highlighting if no match
                 }
-                frame.setTitle(file.getName());
-                changed = false;
+                frame.setTitle(file.getName()); // Update frame title with file name
+                changed = false; // Reset changed flag
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } else {
-
         }
     }
 
     private void saveAction() {
+        JFileChooser chooser = PadFileIO.getInstance().getFileChooser(); // Get file chooser
+        int result = chooser.showSaveDialog(frame); // Show save dialog
 
-        JFileChooser chooser = PadFileIO.getInstance().getFileChooser();
-        int i = chooser.showSaveDialog(frame);
-
-
-        if (i == JFileChooser.APPROVE_OPTION){
+        if (result == JFileChooser.APPROVE_OPTION) {
             try {
-                String filePath = chooser.getSelectedFile().getAbsolutePath();
-                String description = chooser.getFileFilter().getDescription();
-                String content = syntaxTextArea.getText();
-                PadFileIO.saveFile(content,filePath,description);
-            }catch (IOException e){
+                String filePath = chooser.getSelectedFile().getAbsolutePath(); // Get file path
+                String description = chooser.getFileFilter().getDescription(); // Get file description
+                String content = syntaxTextArea.getText(); // Get content from text area
+                PadFileIO.saveFile(content, filePath, description); // Save the content to the specified file
+            } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
     }
 
-
     private void searchAction() {
-        PadSearch search = new PadSearch(this, syntaxTextArea);
+        PadSearch search = new PadSearch(this, syntaxTextArea); // Create and display search dialog
     }
 
-
-
     private void exitAction() {
-       frame.dispose();
-
+        frame.dispose(); // Dispose the frame (exit the application)
     }
 
     private void helpAction() {
         try {
             URI uri = new URI("https://hamhuo-hub.github.io/static-webapp/");
             Desktop dt = Desktop.getDesktop();
-            dt.browse(uri.toURL().toURI());
+            dt.browse(uri.toURL().toURI()); // Open help website in default browser
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
-
