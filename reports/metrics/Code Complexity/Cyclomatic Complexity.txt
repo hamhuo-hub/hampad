@@ -1,0 +1,166 @@
+<METRICS profile="Complexity metrics" timestamp="ÖÜÈÕ, 6 10ÔÂ 2024 03:00:08 CST">
+	<METRIC category="Method" name="Cognitive complexity" abbreviation="CogC">
+		<VALUE measured="actionPerformed(ActionEvent)" value="0.0"/>
+		<VALUE measured="hampad.PadFileIO.exportPDF(String, File)" value="2.0"/>
+		<VALUE measured="hampad.PadFileIO.getFileChooser()" value="0.0"/>
+		<VALUE measured="hampad.PadFileIO.getFileExtension(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.getInstance()" value="0.0"/>
+		<VALUE measured="hampad.PadFileIO.loadFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.loadODTFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.loadTXTFile(File)" value="0.0"/>
+		<VALUE measured="hampad.PadFileIO.odtFile(String, File)" value="2.0"/>
+		<VALUE measured="hampad.PadFileIO.openFile(File)" value="0.0"/>
+		<VALUE measured="hampad.PadFileIO.openODTFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.openTXTFile(File)" value="0.0"/>
+		<VALUE measured="hampad.PadFileIO.saveFile(String, String, String)" value="4.0"/>
+		<VALUE measured="hampad.PadFileIO.txtFile(String, File)" value="1.0"/>
+		<VALUE measured="hampad.PadPrinter.doPrint()" value="3.0"/>
+		<VALUE measured="hampad.PadPrinter.newPadPrinter()" value="0.0"/>
+		<VALUE measured="hampad.PadPrinter.print(Graphics, PageFormat, int)" value="1.0"/>
+		<VALUE measured="hampad.PadSearch.PadSearch(JFrame, RSyntaxTextArea)" value="0.0"/>
+		<VALUE measured="hampad.PadSearch.doSearch(RSyntaxTextArea)" value="7.0"/>
+		<VALUE measured="hampad.PadService.PadService()" value="0.0"/>
+		<VALUE measured="hampad.PadService.exitAction()" value="0.0"/>
+		<VALUE measured="hampad.PadService.helpAction()" value="1.0"/>
+		<VALUE measured="hampad.PadService.initComponents()" value="0.0"/>
+		<VALUE measured="hampad.PadService.initTextarea()" value="0.0"/>
+		<VALUE measured="hampad.PadService.newAction()" value="3.0"/>
+		<VALUE measured="hampad.PadService.openAction()" value="12.0"/>
+		<VALUE measured="hampad.PadService.saveAction()" value="3.0"/>
+		<VALUE measured="hampad.PadService.searchAction()" value="0.0"/>
+		<VALUE measured="hampad.PadService.updateFrameTitle()" value="2.0"/>
+		<VALUE measured="hampad.PadStarter.main(String[])" value="0.0"/>
+	</METRIC>
+	<METRIC category="Method" name="Essential cyclomatic complexity" abbreviation="ev(G)">
+		<VALUE measured="hampad.PadFileIO.exportPDF(String, File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.getFileChooser()" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.getFileExtension(File)" value="2.0"/>
+		<VALUE measured="hampad.PadFileIO.getInstance()" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.loadFile(File)" value="2.0"/>
+		<VALUE measured="hampad.PadFileIO.loadODTFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.loadTXTFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.odtFile(String, File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.openFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.openODTFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.openTXTFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.saveFile(String, String, String)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.txtFile(String, File)" value="1.0"/>
+		<VALUE measured="hampad.PadPrinter.doPrint()" value="1.0"/>
+		<VALUE measured="hampad.PadPrinter.newPadPrinter()" value="1.0"/>
+		<VALUE measured="hampad.PadPrinter.print(Graphics, PageFormat, int)" value="2.0"/>
+		<VALUE measured="hampad.PadSearch.PadSearch(JFrame, RSyntaxTextArea)" value="1.0"/>
+		<VALUE measured="hampad.PadSearch.doSearch(RSyntaxTextArea)" value="1.0"/>
+		<VALUE measured="hampad.PadService.PadService()" value="1.0"/>
+		<VALUE measured="hampad.PadService.exitAction()" value="1.0"/>
+		<VALUE measured="hampad.PadService.helpAction()" value="1.0"/>
+		<VALUE measured="hampad.PadService.initComponents()" value="1.0"/>
+		<VALUE measured="hampad.PadService.initTextarea()" value="1.0"/>
+		<VALUE measured="hampad.PadService.newAction()" value="1.0"/>
+		<VALUE measured="hampad.PadService.openAction()" value="1.0"/>
+		<VALUE measured="hampad.PadService.saveAction()" value="1.0"/>
+		<VALUE measured="hampad.PadService.searchAction()" value="1.0"/>
+		<VALUE measured="hampad.PadService.updateFrameTitle()" value="1.0"/>
+		<VALUE measured="hampad.PadStarter.main(String[])" value="1.0"/>
+	</METRIC>
+	<METRIC category="Method" name="Design complexity" abbreviation="iv(G)">
+		<VALUE measured="hampad.PadFileIO.exportPDF(String, File)" value="3.0"/>
+		<VALUE measured="hampad.PadFileIO.getFileChooser()" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.getFileExtension(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.getInstance()" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.loadFile(File)" value="2.0"/>
+		<VALUE measured="hampad.PadFileIO.loadODTFile(File)" value="2.0"/>
+		<VALUE measured="hampad.PadFileIO.loadTXTFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.odtFile(String, File)" value="3.0"/>
+		<VALUE measured="hampad.PadFileIO.openFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.openODTFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.openTXTFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.saveFile(String, String, String)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.txtFile(String, File)" value="2.0"/>
+		<VALUE measured="hampad.PadPrinter.doPrint()" value="3.0"/>
+		<VALUE measured="hampad.PadPrinter.newPadPrinter()" value="1.0"/>
+		<VALUE measured="hampad.PadPrinter.print(Graphics, PageFormat, int)" value="2.0"/>
+		<VALUE measured="hampad.PadSearch.PadSearch(JFrame, RSyntaxTextArea)" value="1.0"/>
+		<VALUE measured="hampad.PadSearch.doSearch(RSyntaxTextArea)" value="4.0"/>
+		<VALUE measured="hampad.PadService.PadService()" value="1.0"/>
+		<VALUE measured="hampad.PadService.exitAction()" value="1.0"/>
+		<VALUE measured="hampad.PadService.helpAction()" value="2.0"/>
+		<VALUE measured="hampad.PadService.initComponents()" value="1.0"/>
+		<VALUE measured="hampad.PadService.initTextarea()" value="1.0"/>
+		<VALUE measured="hampad.PadService.newAction()" value="3.0"/>
+		<VALUE measured="hampad.PadService.openAction()" value="10.0"/>
+		<VALUE measured="hampad.PadService.saveAction()" value="3.0"/>
+		<VALUE measured="hampad.PadService.searchAction()" value="1.0"/>
+		<VALUE measured="hampad.PadService.updateFrameTitle()" value="3.0"/>
+		<VALUE measured="hampad.PadStarter.main(String[])" value="1.0"/>
+	</METRIC>
+	<METRIC category="Method" name="Cyclomatic complexity" abbreviation="v(G)">
+		<VALUE measured="hampad.PadFileIO.exportPDF(String, File)" value="3.0"/>
+		<VALUE measured="hampad.PadFileIO.getFileChooser()" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.getFileExtension(File)" value="2.0"/>
+		<VALUE measured="hampad.PadFileIO.getInstance()" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.loadFile(File)" value="2.0"/>
+		<VALUE measured="hampad.PadFileIO.loadODTFile(File)" value="2.0"/>
+		<VALUE measured="hampad.PadFileIO.loadTXTFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.odtFile(String, File)" value="3.0"/>
+		<VALUE measured="hampad.PadFileIO.openFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.openODTFile(File)" value="2.0"/>
+		<VALUE measured="hampad.PadFileIO.openTXTFile(File)" value="1.0"/>
+		<VALUE measured="hampad.PadFileIO.saveFile(String, String, String)" value="7.0"/>
+		<VALUE measured="hampad.PadFileIO.txtFile(String, File)" value="2.0"/>
+		<VALUE measured="hampad.PadPrinter.doPrint()" value="3.0"/>
+		<VALUE measured="hampad.PadPrinter.newPadPrinter()" value="1.0"/>
+		<VALUE measured="hampad.PadPrinter.print(Graphics, PageFormat, int)" value="2.0"/>
+		<VALUE measured="hampad.PadSearch.PadSearch(JFrame, RSyntaxTextArea)" value="1.0"/>
+		<VALUE measured="hampad.PadSearch.doSearch(RSyntaxTextArea)" value="4.0"/>
+		<VALUE measured="hampad.PadService.PadService()" value="1.0"/>
+		<VALUE measured="hampad.PadService.exitAction()" value="1.0"/>
+		<VALUE measured="hampad.PadService.helpAction()" value="2.0"/>
+		<VALUE measured="hampad.PadService.initComponents()" value="1.0"/>
+		<VALUE measured="hampad.PadService.initTextarea()" value="1.0"/>
+		<VALUE measured="hampad.PadService.newAction()" value="3.0"/>
+		<VALUE measured="hampad.PadService.openAction()" value="10.0"/>
+		<VALUE measured="hampad.PadService.saveAction()" value="3.0"/>
+		<VALUE measured="hampad.PadService.searchAction()" value="1.0"/>
+		<VALUE measured="hampad.PadService.updateFrameTitle()" value="3.0"/>
+		<VALUE measured="hampad.PadStarter.main(String[])" value="1.0"/>
+	</METRIC>
+	<METRIC category="Class" name="Average operation complexity" abbreviation="OCavg">
+		<VALUE measured="hampad.PadFileIO" value="2.076923076923077"/>
+		<VALUE measured="hampad.PadPrinter" value="1.6666666666666667"/>
+		<VALUE measured="hampad.PadSearch" value="1.6666666666666667"/>
+		<VALUE measured="hampad.PadService" value="2.2"/>
+		<VALUE measured="hampad.PadStarter" value="1.0"/>
+	</METRIC>
+	<METRIC category="Class" name="Maximum operation complexity" abbreviation="OCmax">
+		<VALUE measured="hampad.PadFileIO" value="9.0"/>
+		<VALUE measured="hampad.PadPrinter" value="2.0"/>
+		<VALUE measured="hampad.PadSearch" value="3.0"/>
+		<VALUE measured="hampad.PadService" value="8.0"/>
+		<VALUE measured="hampad.PadStarter" value="1.0"/>
+	</METRIC>
+	<METRIC category="Class" name="Weighted method complexity" abbreviation="WMC">
+		<VALUE measured="hampad.PadFileIO" value="27.0"/>
+		<VALUE measured="hampad.PadPrinter" value="5.0"/>
+		<VALUE measured="hampad.PadSearch" value="5.0"/>
+		<VALUE measured="hampad.PadService" value="22.0"/>
+		<VALUE measured="hampad.PadStarter" value="1.0"/>
+	</METRIC>
+	<METRIC category="Package" name="Average cyclomatic complexity" abbreviation="v(G)avg">
+		<VALUE measured="hampad" value="2.2758620689655173"/>
+	</METRIC>
+	<METRIC category="Package" name="Total cyclomatic complexity" abbreviation="v(G)tot">
+		<VALUE measured="hampad" value="66.0"/>
+	</METRIC>
+	<METRIC category="Module" name="Average cyclomatic complexity" abbreviation="v(G)avg">
+		<VALUE measured="hampad" value="2.2758620689655173"/>
+	</METRIC>
+	<METRIC category="Module" name="Total cyclomatic complexity" abbreviation="v(G)tot">
+		<VALUE measured="hampad" value="66.0"/>
+	</METRIC>
+	<METRIC category="Project" name="Average cyclomatic complexity" abbreviation="v(G)avg">
+		<VALUE measured="project" value="2.2758620689655173"/>
+	</METRIC>
+	<METRIC category="Project" name="Total cyclomatic complexity" abbreviation="v(G)tot">
+		<VALUE measured="project" value="66.0"/>
+	</METRIC>
+</METRICS>
