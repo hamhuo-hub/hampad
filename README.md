@@ -1,3 +1,21 @@
+npm:`https://www.npmjs.com/package/hampad`
+
+github:`https://github.com/hamhuo-hub/hampad.git`
+
+For windows users
+
+open jar File, all needed dependecies have included.
+
+For Linux Users
+
+# IMPORTANT
+# RUN FOLLOW COMMAND TO ALLOW X11 CONNECTION： 
+# xhost + 
+# THEN OPEN CONTAINER： 
+# docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -d hampad
+
+
+
 ## Download link:
 
 github: ` https://github.com/JiaPengShang/251-Assignment1-2024-Jiapeng-Zihang.git    `
