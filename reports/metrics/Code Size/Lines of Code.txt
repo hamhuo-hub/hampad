@@ -1,4 +1,4 @@
-Lines of Code,ÖÜÈÕ, 6 10ÔÂ 2024 03:38:15 CST
+Lines of Code,ï¿½ï¿½ï¿½ï¿½, 6 10ï¿½ï¿½ 2024 03:38:15 CST
 Class,LOC
 hampad.PadFileIO,148
 hampad.PadPrinter,43

@@ -1,4 +1,4 @@
-<METRICS profile="Complexity metrics" timestamp="ÖÜÈÕ, 6 10ÔÂ 2024 03:00:08 CST">
+<METRICS profile="Complexity metrics" timestamp="ï¿½ï¿½ï¿½ï¿½, 6 10ï¿½ï¿½ 2024 03:00:08 CST">
 	<METRIC category="Method" name="Cognitive complexity" abbreviation="CogC">
 		<VALUE measured="actionPerformed(ActionEvent)" value="0.0"/>
 		<VALUE measured="hampad.PadFileIO.exportPDF(String, File)" value="2.0"/>

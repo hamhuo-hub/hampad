@@ -1,4 +1,4 @@
-<METRICS profile="Number of Methods" timestamp="ÖÜÈÕ, 6 10ÔÂ 2024 03:19:32 CST">
+<METRICS profile="Number of Methods" timestamp="ï¿½ï¿½ï¿½ï¿½, 6 10ï¿½ï¿½ 2024 03:19:32 CST">
 	<METRIC category="Project" name="Number of methods" abbreviation="METH">
 		<VALUE measured="project" value="29.0"/>
 	</METRIC>

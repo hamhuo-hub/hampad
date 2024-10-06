@@ -1,4 +1,4 @@
-Chidamber-Kemerer metrics,ÖÜÈÕ, 6 10ÔÂ 2024 02:59:01 CST
+Chidamber-Kemerer metrics,ï¿½ï¿½ï¿½ï¿½, 6 10ï¿½ï¿½ 2024 02:59:01 CST
 Class,CBO,DIT,LCOM,NOC,RFC,WMC
 hampad.PadFileIO,1,1,4,0,58,27
 hampad.PadPrinter,1,1,3,0,13,5
