@@ -4,66 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a13376a0-4a12-4f45-a34c-20e5c90675b2" name="Changes" comment="Add files via upload">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadFileIO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadPrinter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadSearch$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadSearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadService$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadStarter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/text_editor_config.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/text_editor_config.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hampad-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pmd.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pmd/rulesets/001-maven-pmd-plugin-default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pmd/rulesets/basic.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pmd/rulesets/design.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/css/apache-maven-fluido-2.0.0-M9.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/css/print.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/css/site.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/accessories-text-editor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/add.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/apache-maven-project-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/application-certificate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/contact-new.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/document-properties.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/drive-harddisk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/fix.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/icon_error_sml.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/icon_help_sml.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/icon_info_sml.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/icon_success_sml.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/icon_warning_sml.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/image-x-generic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/internet-web-browser.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/logos/build-by-maven-black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/logos/build-by-maven-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/logos/maven-feather.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/network-server.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/package-x-generic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/profiles/pre-release.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/profiles/retired.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/profiles/sandbox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/remove.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/rss.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/update.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/images/window-new.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/img/glyphicons-halflings-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/img/glyphicons-halflings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/js/apache-maven-fluido-2.0.0-M9.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/reports/pmd.html" beforeDir="false" />
-    </list>
+    <list default="true" id="a13376a0-4a12-4f45-a34c-20e5c90675b2" name="Changes" comment="Add files via upload" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,38 +59,38 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.HelloWorldPrinter.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.JHighlight (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.JHighlight.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PadStarter.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PadStarter.count.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kinemika/Desktop/learn/gongcheng1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.HelloWorldPrinter.executor": "Debug",
+    "Application.JHighlight (1).executor": "Run",
+    "Application.JHighlight.executor": "Run",
+    "Application.PadStarter.executor": "Run",
+    "JUnit.PadStarter.count.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/kinemika/Desktop/learn/gongcheng1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;PLAIN_TEXT&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PLAIN_TEXT"
     ]
   }
-}</component>
-  <component name="RunManager" selected="Application.PadStarter">
+}]]></component>
+  <component name="RunManager">
     <configuration name="JHighlight (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.uwyn.jhighlight.JHighlight" />
       <module name="hampad" />
