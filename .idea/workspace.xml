@@ -5,8 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a13376a0-4a12-4f45-a34c-20e5c90675b2" name="Changes" comment="Add files via upload">
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/config.yaml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadFileIO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadPrinter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadSearch$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadService$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hampad/PadStarter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/text_editor_config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/text_editor_config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/hampad-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pmd.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pmd/rulesets/001-maven-pmd-plugin-default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pmd/rulesets/basic.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pmd/rulesets/design.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/css/apache-maven-fluido-2.0.0-M9.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/css/print.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/css/site.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/accessories-text-editor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/add.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/apache-maven-project-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/application-certificate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/contact-new.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/document-properties.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/drive-harddisk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/fix.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/icon_error_sml.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/icon_help_sml.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/icon_info_sml.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/icon_success_sml.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/icon_warning_sml.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/image-x-generic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/internet-web-browser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/logos/build-by-maven-black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/logos/build-by-maven-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/logos/maven-feather.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/network-server.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/package-x-generic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/profiles/pre-release.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/profiles/retired.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/profiles/sandbox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/remove.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/rss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/update.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/images/window-new.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/img/glyphicons-halflings-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/img/glyphicons-halflings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/js/apache-maven-fluido-2.0.0-M9.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/pmd.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,6 +257,7 @@
       <workItem from="1727793993786" duration="592000" />
       <workItem from="1727794815467" duration="16000" />
       <workItem from="1727798379203" duration="190000" />
+      <workItem from="1728196605037" duration="372000" />
     </task>
     <task id="LOCAL-00001" summary="Add files via upload">
       <option name="closed" value="true" />
