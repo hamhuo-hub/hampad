@@ -29,7 +29,6 @@
             <version>2.23.1</version>
         </dependency>
 
-
         <!-- https://mvnrepository.com/artifact/org.fife.ui/rsyntaxtextarea -->
         <dependency>
             <groupId>com.fifesoft</groupId>
@@ -43,7 +42,6 @@
             <artifactId>simple-odf</artifactId>
             <version>0.9.0</version>
         </dependency>
-
 
         <dependency>
             <groupId>junit</groupId>
@@ -63,8 +61,8 @@
             <version>2.0</version>
         </dependency>
 
-
     </dependencies>
+
 
     <repositories>
         <repository>
@@ -99,6 +97,31 @@
                     <target>11</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.14.0</version>
+                <configuration>
+                    <targetJdk>11</targetJdk>
+                    <linkXRef>false</linkXRef>
+                    <rulesets>
+                        <ruleset>/rulesets/java/basic.xml</ruleset>
+                        <ruleset>/rulesets/java/design.xml</ruleset>
+                    </rulesets>
+                    <outputDirectory>${project.basedir}/reports/pmd</outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>generate-pmd-report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>pmd</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
