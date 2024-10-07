@@ -1,21 +1,3 @@
-npm:`https://www.npmjs.com/package/hampad`
-
-github:`https://github.com/hamhuo-hub/hampad.git`
-
-For windows users
-
-open jar File, all needed dependecies have included.
-
-For Linux Users
-
-# IMPORTANT
-# RUN FOLLOW COMMAND TO ALLOW X11 CONNECTION： 
-# xhost + 
-# THEN OPEN CONTAINER： 
-# docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -d hampad
-
-
-
 ## Download link:
 
 github: ` https://github.com/JiaPengShang/251-Assignment1-2024-Jiapeng-Zihang.git    `
@@ -31,35 +13,6 @@ github: ` https://github.com/JiaPengShang/251-Assignment1-2024-Jiapeng-Zihang.gi
 ```
 
 
-
-## Usage：
-
-```apl
-npm: https://www.npmjs.com/package/hampad
-github: https://github.com/hamhuo-hub/hampad.git
-```
-
-#### For windows users
-
-open jar File, all needed dependecies have included.
-
-#### For Linux Users：
-
-run following command (SU needed)
-
-```
-npm i hampad:latest
-
-# IMPORTANT
-
-# RUN FOLLOW COMMAND TO ALLOW X11 CONNECTION： 
-
-xhost + 
-
-# THEN OPEN CONTAINER： 
-
-docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -d hampad
-```
 
 
 
@@ -185,3 +138,28 @@ Here are the shortcuts for these actions:
 5.Cut:  `Ctrl+X`
 
 6.Delete:  `Del`
+
+
+
+
+### An example of dockerizing this Maven Project
+
+Type the command in the terminal:
+
+First run maven locally
+
+`mvn clean install`
+
+Check the settings in the Docker file in `Dockerfile`
+
+Build a docker image
+
+`docker build -t application .`
+
+Check if the image has been successfully built
+
+`docker images`
+
+Run the image on a specified port
+
+`docker run -p 8002:8002 -d application`
