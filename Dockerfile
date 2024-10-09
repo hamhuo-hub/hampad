@@ -8,6 +8,6 @@
 
 FROM openjdk:11-jre-slim
 WORKDIR /app
-COPY target/myapp-1.0-SNAPSHOT.jar /app/myapp.jar
+COPY jar/hampad-1.3-SNAPSHOT-jar-with-dependencies.jar /app/myapp.jar
 EXPOSE 8080
 CMD ["java", "-jar", "myapp.jar"]
