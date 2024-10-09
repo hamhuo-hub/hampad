@@ -6,6 +6,8 @@ github: ` https://github.com/JiaPengShang/251-Assignment1-2024-Jiapeng-Zihang.gi
 ## Member information：
 
 ```
+Massey Uni
+
 1. Name: Jiapeng Shang
    ID: 23010093
 2. Name: Zihang Huo
