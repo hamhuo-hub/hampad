@@ -6,3 +6,5 @@
 /target/classes/hampad/PadStarter.class
 /target
 .gitignore
+.idea/workspace.xml
+/.idea
